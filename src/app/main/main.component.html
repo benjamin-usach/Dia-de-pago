@@ -1,0 +1,27 @@
+<div class="container-fluid">
+  <div class="row" style="height: 100vh;">
+    <div class="col-2"></div>
+    <div class="col-8 mx-auto my-auto">
+      <mat-card class="example-card">
+        <mat-card-title style="text-align: center">¿Cuánto falta para el siguiente día de pago?</mat-card-title>
+        <mat-card-subtitle style="text-align: center">¿Por qué es tan largo el mes y dura tan poco el sueldo?
+        </mat-card-subtitle>
+        <mat-card-content style="height: fit-content;">
+          <div class="text-center">
+            <p>Faltan</p><br><br>
+            <h1 style="font-size: 5rem; color: yellow;">{{daysLeft}}</h1><br>
+            <p>dias</p>
+            <small><countdown [config]="config"></countdown></small><br>
+            <small>días:horas:minutos:segundos <br> para ser exactos</small>
+            <p>Para el siguiente dia de pago</p>
+          </div>
+        </mat-card-content>
+        <mat-card-actions>
+          <button mat-button mat-raised-button color="accent" class="w-100">F</button>
+        </mat-card-actions>
+      </mat-card>
+
+    </div>
+    <div class="col-2"></div>
+  </div>
+</div>

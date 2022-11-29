@@ -24,6 +24,8 @@ export class MainComponent implements OnInit {
   timeleft: any;
   daysLeft: any;
   sub: any;
+  audio = new Audio('../../assets/lights.mp3');
+  playing = false;
 
   config: CountdownConfig = {
     leftTime: 0,
@@ -64,6 +66,17 @@ export class MainComponent implements OnInit {
       this.today = new Date();
 
     });
+  }
+
+  debug(){
+    if(!this.playing){
+      this.audio.play();
+      this.playing = true;
+    }
+    else{
+      this.audio.pause();
+      this.playing = false;
+    }
   }
 
 }

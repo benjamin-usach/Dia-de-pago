@@ -1,6 +1,5 @@
 <div class="container-fluid">
   <div class="row" style="height: 100vh;">
-    <app-lights></app-lights>
     <div class="col-2"></div>
     <div class="col-8 mx-auto my-auto">
       <mat-card class="example-card">
@@ -18,11 +17,12 @@
           </div>
         </mat-card-content>
         <mat-card-actions>
-          <button mat-button mat-raised-button color="accent" class="w-100" (click)="debug()">F</button>
+          <button mat-button mat-raised-button color="accent" class="w-100" (click)="debug(maincanvas)">F</button>
         </mat-card-actions>
       </mat-card>
     </div>
     <div class="col-2"></div>
-    <audio #music src="../../assets/lights.mp3" type="audio/mpeg" style="display: none;"></audio>
+    <audio #music src="../../assets/newyear.mp3" type="audio/mpeg" style="display: none;"></audio>
   </div>
 </div>
+<canvas #maincanvas></canvas>
